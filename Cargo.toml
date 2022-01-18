@@ -1,0 +1,13 @@
+[package]
+name = "eventjoiner"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = { version = "0.4.19", features = ["serde"] }
+clap = { version = "3.0.7", features = ["derive"] }
+notify-rust = "4.5.5"
+serde = { version = "1.0.133", features = ["derive"] }
+toml = "0.5.8"
