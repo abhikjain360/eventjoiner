@@ -1,0 +1,107 @@
+# notify this many minutes before the event, if launched in daemon mode
+notify_before = 5 # mins
+
+# list out commands
+command.'link1' = { name = 'firefox', args = ['meet.google.com/aaa-aaa-aaa'] }
+command.'link2' = { name = 'firefox', args = ['--incognito', 'meet.google.com/bbb-bbb-bbb'] }
+
+# map events to commands
+events.'history' = 'link1'
+events.'english' = 'link1'
+events.'programming' = 'link1'
+
+events.'economics' = 'link2'
+events.'french' = 'link2'
+
+# write out the timetable, map times to classes
+# at the specified time, the command corresponding to that class is launched
+#
+# the time format needs to be in HH:MM:SS
+[[timetable.'mon']]
+time = '11:00:00'
+event = 'english'
+
+[[timetable.'mon']]
+time = '12:00:00'
+event = 'economics'
+
+[[timetable.'mon']]
+time = '13:00:00'
+event = 'programming'
+
+[[timetable.'teu']]
+time = '9:00:00'
+event = 'english'
+
+[[timetable.'teu']]
+time = '16:00:00'
+event = 'history'
+
+[[timetable.'wed']]
+time = '9:00:00'
+event = 'programming'
+
+[[timetable.'wed']]
+time = '10:00:00'
+event = 'french'
+
+[[timetable.'wed']]
+time = '11:00:00'
+event = 'history'
+
+[[timetable.'wed']]
+time = '12:00:00'
+event = 'french'
+
+[[timetable.'wed']]
+time = '16:00:00'
+event = 'economics'
+
+[[timetable.'thu']]
+time = '10:00:00'
+event = 'economics'
+
+[[timetable.'thu']]
+time = '14:00:00'
+event = 'french'
+
+[[timetable.'thu']]
+time = '15:00:00'
+event = 'english'
+
+[[timetable.'fri']]
+time = '10:00:00'
+event = 'programming'
+
+[[timetable.'fri']]
+time = '12:00:00'
+event = 'history'
+
+[[timetable.'fri']]
+time = '14:00:00'
+event = 'french'
+
+# another example
+
+command.'slack' = 'app.slack.com/client/my_work'
+events.'meetup' = 'slack'
+
+[[timetable.'mon']]
+time = '10:30:00'
+event = 'meetup'
+
+[[timetable.'teu']]
+time = '10:30:00'
+event = 'meetup'
+
+[[timetable.'web']]
+time = '10:30:00'
+event = 'meetup'
+
+[[timetable.'thu']]
+time = '10:30:00'
+event = 'meetup'
+
+[[timetable.'fri']]
+time = '10:30:00'
+event = 'meetup'
